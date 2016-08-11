@@ -1,0 +1,23 @@
+
+
+* {
+  font-family: Times;
+}
+
+.answer {
+  display: inline-flex;
+  width: inherit;
+  border: 1px black solid;
+  padding: 10px;
+}
+
+Header {
+  border: 1px black solid;
+  min-height: 15%;
+  background-color: gray;
+}
+
+body {
+  min-height: 800px;
+
+}
