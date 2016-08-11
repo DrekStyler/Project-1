@@ -1,0 +1,14 @@
+{
+  "database": {
+    "rules": "rawText.json"
+  },
+  "hosting": {
+    "public": "CAMP",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

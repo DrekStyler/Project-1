@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project 1</title>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA0F-mgd-rJngYJ5brfDmRLyUWdknGq8vY",
+            authDomain: "dmsproj1galvanize.firebaseapp.com",
+            databaseURL: "https://dmsproj1galvanize.firebaseio.com",
+            storageBucket: "",
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/readable/bootstrap.min.css" rel="stylesheet" integrity="sha384-Li5uVfY2bSkD3WQyiHX8tJd0aMF91rMrQP5aAewFkHkVSTT2TmD2PehZeMmm7aiL" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body class="background" background="paper.jpeg">
+    <div class="questions">
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <h1 class="col-md-12 text-center">News Flash</h1>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row upper">
+        <button class="sub col-md-3 text-center" id="feedback">Feedback for the Team</button>
+        <button class="sub col-md-3" id="lightsOut">Turn Off The Lights!</button>
+        <select  class="materialSelect col-md-3">
+          <option value="short">Guns, Germs, and Steel</option>
+          <option value="Elon">SpaceX to Launch Satelites</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 text-center col-md-offset-3" id="word" placeholder="Your News Here">Your News</div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <button id="play" class="col-md-2 col-md-offset-3 lower button">Play</button>
+          <select class="sub select col-md-2" id="speed">
+            <option class="speed" value='300'>200 WPM</option>
+            <option class="speed" value='200'>300 WPM</option>
+            <option class="speed" value='150'>400 WPM</option>
+            <option class="speed" value='120'>500 WPM</option>
+            <option class="speed" value='100'>600 WPM</option>
+            <option class="speed" value='25'>2400 WPM</option>
+            <option class="speed" value='5'>12000 WPM</option>
+            <option class="speed" value='0'>I'm Neo.</option>
+          </select>
+        </div>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
