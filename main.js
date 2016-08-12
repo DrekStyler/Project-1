@@ -19,7 +19,7 @@ console.log($('.materialSelect').val());
 if ($('.materialSelect').val() === "short") {
   console.log('sup');
   $.ajax({
-          url: 'http://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/short.json?alt=media&token=592dd566-db77-4db7-961b-ad9121a422ef',
+          url: 'https://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/short.json?alt=media&token=592dd566-db77-4db7-961b-ad9121a422ef',
           method: 'GET'
       })
       .done(function(data) {
@@ -46,7 +46,7 @@ if ($('.materialSelect').val() === "short") {
 } else {
   console.log('elon');
     $.ajax({
-            url: 'http://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/rawText.json?alt=media&token=e71f983c-555d-46f9-bbf8-06b49b61af4a',
+            url: 'https://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/rawText.json?alt=media&token=e71f983c-555d-46f9-bbf8-06b49b61af4a',
             method: 'GET'
         })
         .done(function(data) {
@@ -115,7 +115,7 @@ if ($('.materialSelect').val() === "short") {
         } else {
             $('body').addClass('background')
             $('body').removeClass('lightsOut')
-            $('body').attr('background="paper.jpeg"')
+            $('body').attr('background:"paper.jpeg"')
         }
 
     })
