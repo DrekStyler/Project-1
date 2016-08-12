@@ -122,13 +122,13 @@ footer {
   position:relative;
   vertical-align:baseline;
   background-color: #2E3042;
-  background-size:1260px 100px;
+  background-size:1260px 200px;
   
 }
 
 .footdiv {
-       min-height: 100px; 
+       min-height: 200px; 
        height:auto; 
-       height: 100px; 
+       height: 200px; 
    
 }
