@@ -1,18 +1,9 @@
 
-html { 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 body {
   background-size: 1260px 800px;
+  background-repeat: no-repeat;
 }
-
-.background {
-
-}
-
 
 h1 {
   display: block;
