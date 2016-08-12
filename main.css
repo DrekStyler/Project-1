@@ -118,6 +118,7 @@ input {
 }
 
 footer {
+  display:flex;
   background-color: #2E3042;
   background-size:1270px 100px;
   
