@@ -118,7 +118,7 @@ input {
 }
 
 footer {
-  
+  position:relative;
   background-color: #2E3042;
   background-size:1260px 100px;
   
