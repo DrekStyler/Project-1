@@ -116,3 +116,8 @@ input {
 .btn {
   padding: 4px;
 }
+
+footer {
+  background-color: #2E3042;
+  min-height:100px;
+}
