@@ -123,3 +123,10 @@ footer {
   background-size:1260px 100px;
   
 }
+
+.footdiv {
+       min-height: 200px; 
+       height:auto; 
+       height: 200px; 
+   
+}
