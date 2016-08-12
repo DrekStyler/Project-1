@@ -1,7 +1,11 @@
 
+html{
+    min-height:100%;
+    position:relative;
+}
 
 body {
-  background-size: 1270px 600px;
+  background-size: 1270px auto;
   background-repeat: no-repeat;
 }
 
