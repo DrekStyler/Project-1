@@ -19,7 +19,7 @@ h1 {
   position:absolute;
   background-color: #2E3042;
   margin-top:0px;
-  padding:65px;
+  padding:45px;
 }
 
 .upper {
@@ -122,13 +122,13 @@ footer {
   position:relative;
   vertical-align:baseline;
   background-color: #2E3042;
-  background-size:1260px 200px;
+  background-size:1260px 100px;
   
 }
 
 .footdiv {
-       min-height: 200px; 
+       min-height: 100px; 
        height:auto; 
-       height: 200px; 
+       height: 100px; 
    
 }
