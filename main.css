@@ -115,6 +115,7 @@ input {
 
 footer {
   position:relative;
+  vertical-align:baseline;
   background-color: #2E3042;
   background-size:1260px 100px;
   
