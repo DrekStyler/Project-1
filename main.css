@@ -1,6 +1,4 @@
-/** {
-  border:black 1px solid;
-}*/
+
 
 body {
   background-size: 1280px 900px;
@@ -13,39 +11,49 @@ body {
 
 h1 {
   display: block;
+  font-size: 5rem;
   align-items: center;
   vertical-align: middle;
-  color:#373A40;
+  color:#E8E7E8;
   border-bottom: 3px #A1ABB2 solid;
-  position:relative;
+  position:absolute;
+  background-color: #2E3042;
 }
 
 .upper {
-  font-size: 2rem;
+  font-size: 1.5rem;
   vertical-align: middle;
   padding:3%;
   margin-left: 15%;
   left: 20%;
   opacity: .9;
+
+
 }
 
 .lower {
-  /*vertical-align: middle;*/
-  /*margin:3%;*/
-  margin-left: 33%;
+  display: block;
+  vertical-align: middle;
+  margin:3%;
+  margin-top: 30px;
+  margin-left: 25%;
   margin-right: 4%;
+  padding: 5px;
 }
 
 #word {
   min-height: 200px;
+  background-color: #EBF0FC;
   font-size: 7rem;
   padding:2%;
   position:relative;
   align-items: center;
-  padding-top: 20px;
-  opacity: .9;
+  opacity: .7;
+  padding-top: 35px;
+  border-top: 6px solid #A1ABB2;
+  border-bottom: 6px solid #A1ABB2;
 
-  /*border: 4px solid #A1ABB2;*/
+
 }
 
 .lightsOut {
@@ -94,11 +102,16 @@ input {
 
 .materialSelect {
   min-height: 20px;
+  border: 2px #A1ABB2 solid;
 }
 
+.wpm {
+  display: block;
+  vertical-align: middle;
+  top: 30px;
+  border: 2px #A1ABB2 solid;
+}
 
-
-/*//373A40
-//
-//6E747F
-//A5AEBF*/
+.btn {
+  padding: 2px;
+}

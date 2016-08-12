@@ -3,21 +3,55 @@ $(document).ready(function() {
     var json2 = {};
     var text = [];
     var sepArr = []
-    var speed = 300;
-
-
-
+    var speed = 200;
+    var qCounter = 0;
 
     $('#speed').change(function() {
         speed = $('#speed').val(), alert('You think you can read that fast? ' + speed + ' ms delay')
     })
 
+$('.materialSelect').change(function() {
+  console.log($('.materialSelect').val());
+  });
+
+console.log($('.materialSelect').val());
+
+if ($('.materialSelect').val() === "short") {
+  console.log('sup');
+  $.ajax({
+          url: 'http://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/short.json?alt=media&token=592dd566-db77-4db7-961b-ad9121a422ef',
+          method: 'GET'
+      })
+      .done(function(data) {
+          var short = data;
+          var shortArr = $.map(short, function(value, index) {
+    return [value];
+});
+          console.log('yay');
+          let wordArr = shortArr[0].split(" ")
+          console.log(wordArr);
+
+        var shortArr = shortArr[0].split(" ");
+        console.log('shortArr',shortArr);
+        console.log('0',shortArr[0]);
+        sepArr = shortArr
+
+
+      })
+      .fail(function(err) {
+          console.log(err);
+      });
+
+
+} else {
+  console.log('elon');
     $.ajax({
             url: 'http://galvanize-cors-proxy.herokuapp.com/https://firebasestorage.googleapis.com/v0/b/dmsproj1galvanize.appspot.com/o/rawText.json?alt=media&token=e71f983c-555d-46f9-bbf8-06b49b61af4a',
             method: 'GET'
         })
         .done(function(data) {
             var json2 = data;
+            console.log('nay');
             global(json2);
             return json2;
         })
@@ -25,6 +59,7 @@ $(document).ready(function() {
             console.log(err);
         });
 
+}
     function global(data) {
         text.push(data)
         chapters = text[0].Table;
@@ -63,7 +98,7 @@ $(document).ready(function() {
             $('#word').html("<div>" + el + "</div>");
             console.log(index);
             if (index === array.length - 1) {
-                ask(question1)
+                ask(question4)
                 console.log('inside if');
             }
         }, (index + 1) * speed);
@@ -114,6 +149,28 @@ $(document).ready(function() {
         'MS'
     )
 
+    var question4 = new Question(
+      "Paul Ryan works in which side of Congress?",
+      "The House of Representatives",
+      ["The Senate",
+      "The House of Lords",
+      "The House of Commons"]
+    )
+
+    var question5 = new Question(
+      "The ________ is 'a massive piece of legislation that deals with much of the federal government’s funding.'",
+      "omnibus Bill",
+      ["CISA Bill",
+      "House Defense Bill",
+      "Onus Maximus Bill"]
+    )
+
+
+
+
+
+
+
     function appendQuestion(questioninput) {
         $('.questions').append('<div class="qcontent">' + questioninput + '</div>')
     }
@@ -162,11 +219,18 @@ $(document).ready(function() {
     function verify () {
       ( $('input:first').is(':checked')? questionRight() : questionWrong());
     }
-    //
+
     function questionRight() {
       console.log('success');
       $('.questions').html("<div class='alert alert-success' role='alert'>Good Job! That was pretty easy though, heres another.</div>")
-      var intervalID = setTimeout(function() { ask(question2); }, 2000);
+      qCounter++
+      console.log(qCounter);
+
+      if(qCounter >= 2) {
+        location.reload()
+      }
+
+      var intervalID = setTimeout(function() { ask(question5); }, 2000);
 
     }
 
